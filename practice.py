@@ -1,7 +1,7 @@
 import math
 import random
 
-# problem 1
+# -----------------problem 1-----------------
 
 year_wage = int(input("Enter yearly wage:"))
 
@@ -14,7 +14,7 @@ print("The daily_wage is :", daily_wage)
 hourly_wage = daily_wage / 8
 print("The hourly_wage is:", hourly_wage)
 
-# problem 2
+# -----------------problem 2-----------------
 
 weekly_wage = math.ceil(year_wage / 52)
 print("The round off weekly wage is:", weekly_wage)
@@ -25,6 +25,21 @@ print("The round off daily wage is:", daily_wage)
 hourly_wage = math.ceil(daily_wage / 8)
 print("The round off hourly wage is:", hourly_wage)
 
+# -----------------problem 3-----------------
 
+side1 = int(input("Enter the first side length:"))
+side2 = int(input("Enter the second side length:"))
 
+hypotenuse = math.sqrt(side1 ** 2 + side2 ** 2)
 
+print("The hypotenuse of the triangle is:", f'{hypotenuse:.0f}')
+
+# -----------------problem 4------------------
+
+date = int(input("Enter a date in format of MMDDYYYY:"))
+month = date // 1000000
+year = date % 10000
+day = date // 10000 % 100
+print("The month is:", month)
+print("The year is:", year)
+print("The day is:", day)
