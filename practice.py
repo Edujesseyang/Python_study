@@ -1,5 +1,5 @@
-# import math
-# import random
+import math
+import random
 
 # # -----------------problem 1-----------------
 
@@ -44,11 +44,20 @@
 # print("The year is:", year)
 # print("The day is:", day)
 
-# -------------------try out----------------------
-input_num = float(input("Enter a float number:"))
+# ------------------problem 5-------------------
 
-print("Round off the number:" ,round(input_num))
+random_num = random.randint(0, 1000)
+user_num = int(input("Enter a number:"))
+print("The random num is:", random_num)
+print("User num is:", user_num)
+print("The different of those two numbers is:", round(math.fabs(random_num - user_num)))
 
-roundOf_2 = round(input_num, 2)
 
-print("Round it off 2 decimal:", roundOf_2)
+# # -------------------try out----------------------
+# input_num = float(input("Enter a float number:"))
+
+# print("Round off the number:" ,round(input_num))
+
+# roundOf_2 = round(input_num, 2)
+
+# print("Round it off 2 decimal:", roundOf_2)
