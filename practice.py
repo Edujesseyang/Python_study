@@ -134,13 +134,27 @@ from collections import namedtuple
 
 #____________________________EX4____________
 
-age = int(input("Enter your age: "))
-ht = int(input("Enter your height in inches: "))
+# age = int(input("Enter your age: "))
+# ht = int(input("Enter your height in inches: "))
 
-if age < 18:
-    if ht < 50:
-        print("You cannot ride")
-    else:
-        print("you can ride with parents")
-else:
-    print("you can ride")
+# if age < 18:
+#     if ht < 50:
+#         print("You cannot ride")
+#     else:
+#         print("you can ride with parents")
+# else:
+#     print("you can ride")
+
+# ______________loop_______________
+# Flip a number:
+num = int(input("Enter a number:"))
+num2 = 0
+
+while num > 0:
+    num2 = num2 * 10
+    num2 = (num % 10) + num2
+    num = num // 10
+   
+print(num2)
+
+#_________
