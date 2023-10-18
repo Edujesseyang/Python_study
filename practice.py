@@ -363,15 +363,39 @@ from collections import namedtuple
 # -------------------------------------------------------------
 
 # ------------save input to dist------------------------
-print("Check")
-dict = {}
-ipt = " "
-print("Answer:")
-while ipt == " ":
-    ipt = name
-    name = input()
-    value = input()
-    dict[name] = value
-    
+# print("usage: enter item name, enter item value, enter " " to end entering,  then print dict in 'item_name : item_value' formate.")
+# dict = {}
+# ipt = ""
 
-print("Check:",dict)
+# while ipt != " ":
+#     name = input("Enter item name:")
+#     ipt = name
+#     if ipt == " ":
+#         break
+
+    
+#     value = input("Enter item value: ")
+#     dict[name] = value
+    
+#  # print("Check:",dict) --use this to check dict
+
+# for item in dict:
+#     print(f'{item} : {dict[item]}')
+#---------------------------above is good example to save inputs into a dict---------------------
+
+# -------------------银行倍率计算器--------------------------------
+# interest = float(input("Enter the interest rate:"))
+# amount = float(input("How much money do you want to put in:"))
+# year = int(input("How many years do you want to save: "))
+
+# for year in range(year): # 这里的第一个year和第二个year不一样, 第一个是方程里的临时名字变量, 第二个是用户输入的变量
+#     print(f'In the year {year}, You have {round(amount, 2)}')
+#     amount = amount + (amount * interest)
+#---------------------------------------------------------------             
+
+#-------------------range() 的用法------------------------------
+# lst = range(10, 50, 5)
+# for num in lst:
+#     print(num)
+#----创造一个从10到50的每项增加5的list------------------------------
+
