@@ -299,9 +299,37 @@ from collections import namedtuple
 #     print(f'{name} : {dict[name]}')
 # Here the variable name is representing the name of every object in the dict. dict[name] is the value assigned to the name. 
 
-str = " Hi, how are you doing?"
-new_str = ""
-for char in str:
-    new_str = new_str + char + "_"
+# str = " Hi, how are you doing?"
+# new_str = ""
+# for char in str:
+#     new_str = new_str + char + "_"
     
-print(new_str)
+# print(new_str)
+
+#--- this is find trig 
+# a = float(input("Enter the a side:"))
+# b = float(input("Enter the b side:"))
+
+# B = float(input("Enter the angle B: "))
+
+# Br = (math.radians(B))
+# sin_Br = math.sin(Br)
+# sin_Ar = sin_Br / b * a
+# Ar = math.asin(sin_Ar)
+# Ad = math.degrees(Ar)
+
+# Cd = 180 - B - Ad
+
+# Cr = math.radians(Cd)
+# sin_Cr = math.sin(Cr)
+
+# c = sin_Cr / (sin_Br / b)
+
+# print(f'A is {round(Ad, 2)} in degree')
+# print(f'C is {round(Cd, 2)} in degree')
+# print(f'The side c is {round(c, 2)}')
+
+# ----------------above not work well, but close--------
+
+
+
