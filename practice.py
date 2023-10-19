@@ -247,8 +247,9 @@ from collections import namedtuple
 # print("跟你聊天真开心, 再见!")
 # ----------------不是能智能, 哈哈---------------
 
-# -----input nums to get the avg---------
-# usage: keep input nums, when finish, input 0.
+# ------------input nums to get the avg---------------
+#  || usage: keep input nums, when finish, input 0. ||
+# ----------------------------------------------------
 
 # ipt_current = int(input("Enter your numbers: "))
 # sum_nums = 0
@@ -296,7 +297,7 @@ from collections import namedtuple
 # print(new_str)
 # ----------------------------------------
 
-# --- this is find trig----------------------------
+# -------- this is find trig----------------------------
 # a = float(input("Enter the a side:"))
 # b = float(input("Enter the b side:"))
 
