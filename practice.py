@@ -440,24 +440,33 @@ from collections import namedtuple
 #     print(num)   
 #-----------------------------------------------------------   
 
-#-------------------class practice-------------------------
-dist = {}
-total = 0
-students_count = int(input("How many students: "))
-for name in range(students_count):
-    name = input("Enter your student name: ")
-    dist[name] = int(input("Enter your grade: "))
-    total += dist[name]
+# ------------------class practice--------------------------------
+# || Usage: input num of students, input name and scores pairs, ||
+# ||       Program will calculate avg score, list all paris,    ||
+# ||       find and print the hightest score and student name.  ||
+# ----------------------------------------------------------------
+# scores = {}
+# total = 0
+# students_count = int(input("How many students: "))
+# for name in range(students_count):
+#     name = input("Enter your student name: ")
+#     scores[name] = int(input("Enter your score: "))
+#     total += scores[name]
     
-for name in dist:
-    print(f'{name} : {dist[name]}')
+# for name in scores:
+#     print(f'{name} : {scores[name]}')
 
-print(f'Avg is {round((total/students_count), 2)}')
+# print(f'Avg is {round((total/students_count), 2)}')
 
-hightest = 0
-for name in dist:
-    if dist[name] > hightest:
-        hightest = dist[name]
-print(f'The hightest score is {hightest}')
+# hightest = 0
+# for name in scores:
+#     if scores[name] > hightest:
+#         hightest = scores[name]
+# for name in scores:
+#     if scores[name] == hightest:
+#         print(f'The hightest score is "{name}" : {hightest}. ')
+#         break
+#---------------------------------------------------------------
+    
     
 
