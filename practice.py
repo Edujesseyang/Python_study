@@ -399,3 +399,65 @@ from collections import namedtuple
 #     print(num)
 #----创造一个从10到50的每项增加5的list------------------------------
 
+#--------------class practice--------
+# nums = []
+# for i in range(5):
+#     nums.append(int(input("Enter a number:")))
+    
+# print(nums)
+# total = 0
+# count = 0
+# for num in nums:
+#     total += num
+#     count += 1
+# print(f'The sum is: {total}, The avg is: {round((total / count), 2)}')
+#---------------------------------------
+
+#-------------class practice------------
+# num = random.randint(0, 100)
+# user_ipt = int(input("Guess a number:  "))
+# tries = 7
+# while user_ipt != num or tries > 0:
+    
+#     if tries > 0:
+#         if user_ipt < num:
+#             print("Guess higher next time!")
+#         elif user_ipt == num:
+#             print(f'YOU WIN, the number is {num}')
+#             break
+#         else:
+#             print("Guess lower next time!")
+#     else:
+#         print(f'You lost, the right number is {num}')
+#         break
+#     tries -= 1
+#     user_ipt = int(input("Guess a number: "))
+#     print(f'You have {tries} more chances to guess!')     
+#-----------------------------------------------------------
+
+#----------------------class practice-----------------------
+# for num in range(250, 751, 50):
+#     print(num)   
+#-----------------------------------------------------------   
+
+#-------------------class practice-------------------------
+dist = {}
+total = 0
+students_count = int(input("How many students: "))
+for name in range(students_count):
+    name = input("Enter your student name: ")
+    dist[name] = int(input("Enter your grade: "))
+    total += dist[name]
+    
+for name in dist:
+    print(f'{name} : {dist[name]}')
+
+print(f'Avg is {round((total/students_count), 2)}')
+
+hightest = 0
+for name in dist:
+    if dist[name] > hightest:
+        hightest = dist[name]
+print(f'The hightest score is {hightest}')
+    
+
