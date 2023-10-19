@@ -469,5 +469,8 @@ from collections import namedtuple
 #         break
 #---------------------------------------------------------------
     
-    
-
+# ---------------------双 item 的 for loop----------------------
+# lst = [1, 2, 3, 4, 5, 6]
+# for (index, value) in enumerate(lst):
+#     print(f'{index} : {lst[index]}')
+# ---------用 enumerate() 方程来实现 显示 index 和 value ----------
