@@ -506,3 +506,52 @@ from collections import namedtuple
 #     print(f'The distance between the point and force 2 is : {ans}')
 # ------------------------------------------------------------------------
 
+#----------------------Midterm------------------
+# ipt = input("Enter the name of the city:")
+# i = 0
+# for char in ipt:
+#     if char != " ":
+#         i += 1
+# if i % 2 == 0:
+#     print("The name is even.")
+# else:
+#     print("The name is odd.")    
+# #-----------------------------------------------
+
+#----------------------Mt 2-----------------------
+# lst = []
+# while ipt != -1:
+#     ipt = (input("Enter ints:"))
+#     lst.append(ipt) 
+  
+
+# max_num = max(lst) 
+# second_max = -1  
+# for num in lst:
+#     if num > second_max and num != max_num :
+#         second_max_num = num
+# if second_max == -1:
+#     second_max = max_num    
+# print("The second max is", second_max)    
+#------------------------------------------    
+
+#---------------MT 3-----------------
+phone_num = input("Enter a phone number: ")
+digits = {
+    '0' : 0,
+    '1' : 0,
+    '2' : 0,
+    '3' : 0,
+    '4' : 0,
+    '5' : 0,
+    '6' : 0,
+    '7' : 0,
+    '8' : 0,
+    '9' : 0
+    }
+    
+for digit in phone_num:
+    if digit != "-":
+        digits[digit] += 1
+print(digits)
+#--------------------------------------------
