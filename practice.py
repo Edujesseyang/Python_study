@@ -536,22 +536,59 @@ from collections import namedtuple
 #------------------------------------------    
 
 #---------------MT 3-----------------
-phone_num = input("Enter a phone number: ")
-digits = {
-    '0' : 0,
-    '1' : 0,
-    '2' : 0,
-    '3' : 0,
-    '4' : 0,
-    '5' : 0,
-    '6' : 0,
-    '7' : 0,
-    '8' : 0,
-    '9' : 0
-    }
+# phone_num = input("Enter a phone number: ")
+# digits = {
+#     '0' : 0,
+#     '1' : 0,
+#     '2' : 0,
+#     '3' : 0,
+#     '4' : 0,
+#     '5' : 0,
+#     '6' : 0,
+#     '7' : 0,
+#     '8' : 0,
+#     '9' : 0
+#     }
     
-for digit in phone_num:
-    if digit != "-":
-        digits[digit] += 1
-print(digits)
+# for digit in phone_num:
+#     if digit != "-":
+#         digits[digit] += 1
+# print(digits)
 #--------------------------------------------
+
+#----------------Mt 4------------------------
+# grade = int(input("Enter your grade: "))
+# if grade >= 1 and grade <= 5:
+#     print("Elementary school.")
+# elif grade >= 6 and grade <= 8:
+#     print("Middle school.")
+# elif grade >= 9 and grade <= 12:
+#     print("High school.")
+#--------------------------------------------
+
+#--------------------------------------------   
+# 5. You have the following list of 5 strings:
+# ["the", "word", "test", "a", "question"]. Create a new
+# list with these words sorted in order of string length.
+# If two words have the same length, the order can be
+#either way (i.e. with "word" and "test"). You may use any
+# string or list function to complete this problem.
+# :
+lst = ["the", "word", "test", "a", "question"]
+new_lst = []
+longest = 0
+i = 0
+temp = ""
+index = 0
+while i < len(lst):
+    for word in lst:
+        if len(word) > longest:
+            longest = len(word)
+            temp = word
+            index = lst.index(word)
+    i += 1        
+    new_lst.append(temp)
+    # lst.pop(index)    
+print(longest) 
+print(temp)       
+print(new_lst)
