@@ -585,7 +585,7 @@ from collections import namedtuple
 #         longest = len(word)
 # shortest = longest        # make the temp shortest to be the longest
 
-# while i <= count:       # loop len(lst) times
+# while i < count:       # loop len(lst) times
 #     shortest = longest   # re-set  temp shortest every loop
 #     temp = ""           # re-set temp word every loop
 #     for word in lst:        # find the shortest word 
@@ -601,4 +601,46 @@ from collections import namedtuple
 #     i += 1
 
 # print(new_lst)   # print result
-# # --------------------------------------------------------------------------
+# --------------------------------------------------------------------------
+
+# =================================================
+# 6. Print out all of the numbers from -1000 to 1000 (inclusive, exclusive) in groups of 4.
+#---------------------------------------------------
+# for nums in range(-1000, 1001, 4):
+#     print(nums)
+# ===================================================
+
+# ===========================================================
+# Cupertino: 59
+# Sunnyvale: 60
+# Saratoga: 56
+# San Jose: 61
+# Campbell: 59
+# Los Altos: 58
+# Put these into a dictionary and print out the city with the highest and lowest temperatures. If there's a tie, just pick one city
+# Solution: --------------------------------------------------
+# city_temps = {
+#     'Cupertino' : 59,
+#     'Sunnyvale' : 60,
+#     'Saratoga' : 56,
+#     'San Jose' : 61,
+#     'Campbell' : 59,
+#     'Los Altos' : 58,
+# }
+# hightest = 0
+# hi_city = ""
+# for name in city_temps:
+#     if city_temps[name] > hightest:
+#         hightest = city_temps[name]
+#         hi_city = name
+# lowest = hightest
+# lo_city = ""
+# for name in city_temps:
+#     if city_temps[name] < lowest:
+#         lowest = city_temps[name]
+#         lo_city = name
+# print(f'The hottest city is {hi_city}, the temperature is {hightest}.')  
+# print(f'The coldest city is {lo_city}, the temperature is {lowest}.')  
+# ====================================================================================     
+
+#=====================================================================================
