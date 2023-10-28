@@ -611,7 +611,7 @@ from collections import namedtuple
 # ===================================================
 
 # ===========================================================
-# Cupertino: 59
+# Fremont: 59
 # Sunnyvale: 60
 # Saratoga: 56
 # San Jose: 61
@@ -620,7 +620,7 @@ from collections import namedtuple
 # Put these into a dictionary and print out the city with the highest and lowest temperatures. If there's a tie, just pick one city
 # Solution: --------------------------------------------------
 # city_temps = {
-#     'Cupertino' : 59,
+#     'Fremont' : 59,
 #     'Sunnyvale' : 60,
 #     'Saratoga' : 56,
 #     'San Jose' : 61,
@@ -671,3 +671,41 @@ from collections import namedtuple
 # print(f'The longest name is {longest_name}, It has {longest} characters.')
 # print(f'The shortest name is {shortest_name}, It has {shortest} characters.')        
 # ===============================================================================
+
+#==========================================================================
+# 9. Ask user to enter number of years of work experience. 
+# Print out the following message based on the answer.
+# All ranges are inclusive.
+# 0-2 years: "New grad"
+# 3-5 years: "Mid"
+# 6-10 years: "Senior"
+# 11 or more years: "Leadership"
+# solution: ------
+# user_years = int(input("Enter your years of working experience: "))
+# if user_years > 0:
+#     if user_years < 2:
+#         print("New grad")
+#     elif user_years >= 3 and user_years <= 5:
+#         print("Mid")
+#     elif user_years >= 6 and user_years <= 10:
+#         print("Senior")
+#     elif user_years >= 11:
+#         print("Leadership")    
+# ===============================================================
+
+# ===============================================================
+# Ask user to enter a number between 1 and 10. 
+# Keep prompting the user to guess until the user is correct.
+# Once the user is correct, the user wins the game. 
+# You may choose the winning number and hard code it. 
+# Print when the user won and how many tries it took.
+# Solution: -----------
+# answer = random.randint(1, 10)
+# user_ipt = int(input("Guess a number between 1 and 10: "))
+# tries = 1
+# while user_ipt != answer:
+#     user_ipt = int(input("WRONG! Try again: "))
+#     tries += 1
+# else:
+#     print(f'You Win, You had the right number in {tries} tries.')    
+# ================================================================
