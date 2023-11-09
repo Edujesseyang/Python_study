@@ -574,21 +574,72 @@ from collections import namedtuple
 #either way (i.e. with "word" and "test"). You may use any
 # string or list function to complete this problem.
 # :
-lst = ["the", "word", "test", "a", "question"]
-new_lst = []
-longest = 0
-i = 0
-temp = ""
-index = 0
-while i < len(lst):
-    for word in lst:
-        if len(word) > longest:
-            longest = len(word)
-            temp = word
-            index = lst.index(word)
-    i += 1        
-    new_lst.append(temp)
-    # lst.pop(index)    
-print(longest) 
-print(temp)       
-print(new_lst)
+# lst = ["the", "word", "test", "a", "question"]
+# new_lst = []
+# longest = 0
+# i = 0
+# temp = ""
+# index = 0
+# while i < len(lst):
+#     for word in lst:
+#         if len(word) > longest:
+#             longest = len(word)
+#             temp = word
+#             index = lst.index(word)
+#     i += 1        
+#     new_lst.append(temp)
+#     # lst.pop(index)    
+# print(longest) 
+# print(temp)       
+# print(new_lst)
+# =========================================
+
+# =========================================
+# Write a function that calculates the diameter of a circle given the circle's area.
+# ---------------------------------------
+# def diam (area):
+#     return 2 * math.sqrt(area / math.pi)
+# area = 15
+# print(f'Area is {area}, diameter is {round(diam(area), 2)}')
+# =================================================
+
+# ==================================================
+# Create a function that asks student for first and last name (separately), student ID, 
+# classes that get read into a list, and expected graduation year. Create another 
+# function that prints out the information in this order:
+# --------------------------------------
+# def lst(name, ID, classes, year):
+#     list_name = {
+#     'name' : input("Enter your name: "),
+#     'ID' : input("Enter your ID: "),
+#     'classes' : input("Enter your class: "),
+#     'year' : input("Enter your graduation year: ")
+#     }
+#     return list_name
+    
+    
+# def prt(name):
+#     print(name)
+    
+# student = lst("yang", 124, "python", 2024)
+# prt(student)
+# ====================================================
+
+# ==============================================
+# Prompt the user for a list of numbers. Create a function that takes the list 
+# in and returns a 2-element list back with a sum of the odd numbers in the
+# input list and a sum of the even numbers in the input list.
+# -----------------------------------------
+num_list = []
+ipt = 0
+while ipt != "":
+    ipt = input("Enter a number: ")
+    if ipt != "":
+      num_list.append(int(ipt))  
+      
+print(num_list)
+
+def sum(num_list):
+    for num in num_list:
+        if
+    
