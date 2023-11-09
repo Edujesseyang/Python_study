@@ -573,6 +573,144 @@ from collections import namedtuple
 # If two words have the same length, the order can be
 #either way (i.e. with "word" and "test"). You may use any
 # string or list function to complete this problem.
+# ---------------------------------
+# # Solution:
+# lst = ["the", "word", "test", "a", "question"]   # test body
+# new_lst = [] # result list
+# longest = 0 
+# i = 0
+# temp = ""
+# count = len(lst)
+# for word in lst:    # find the longest word
+#     if len(word) > longest:
+#         longest = len(word)
+# shortest = longest        # make the temp shortest to be the longest
+
+# while i < count:       # loop len(lst) times
+#     shortest = longest   # re-set  temp shortest every loop
+#     temp = ""           # re-set temp word every loop
+#     for word in lst:        # find the shortest word 
+#         if len(word) <= shortest:
+#             temp = word    # assign temp to be the shortest word 
+#             shortest = len(word)    # re-assign the length of the shortest 
+            
+#     new_lst.append(temp)   # add temp to result list
+           
+#     for word in lst:      # loop list body find and remove the shortest word
+#         if  word == temp:
+#             lst.remove(word)
+#     i += 1
+
+# print(new_lst)   # print result
+# --------------------------------------------------------------------------
+
+# =================================================
+# 6. Print out all of the numbers from -1000 to 1000 (inclusive, exclusive) in groups of 4.
+#---------------------------------------------------
+# for nums in range(-1000, 1001, 4):
+#     print(nums)
+# ===================================================
+
+# ===========================================================
+# Fremont: 59
+# Sunnyvale: 60
+# Saratoga: 56
+# San Jose: 61
+# Campbell: 59
+# Los Altos: 58
+# Put these into a dictionary and print out the city with the highest and lowest temperatures. If there's a tie, just pick one city
+# Solution: --------------------------------------------------
+# city_temps = {
+#     'Fremont' : 59,
+#     'Sunnyvale' : 60,
+#     'Saratoga' : 56,
+#     'San Jose' : 61,
+#     'Campbell' : 59,
+#     'Los Altos' : 58,
+# }
+# hightest = 0
+# hi_city = ""
+# for name in city_temps:
+#     if city_temps[name] > hightest:
+#         hightest = city_temps[name]
+#         hi_city = name
+# lowest = hightest
+# lo_city = ""
+# for name in city_temps:
+#     if city_temps[name] < lowest:
+#         lowest = city_temps[name]
+#         lo_city = name
+# print(f'The hottest city is {hi_city}, the temperature is {hightest}.')  
+# print(f'The coldest city is {lo_city}, the temperature is {lowest}.')  
+# ====================================================================================     
+
+# =====================================================================================
+# 8. Ask user to keep entering names until user is finished. 
+# Put these names into a list. Print out the longest and shortest names. Spaces count as characters.
+# Solution: ---------------------------------------------------------------------------
+# name_list = []
+# user_ipt = " "
+
+# while user_ipt != "":
+#     user_ipt = input("Enter a name, double press enter to finish entering: ")
+#     name_list.append(user_ipt)
+
+# name_list.pop(len(name_list) - 1)  
+
+# longest = 0
+# longest_name = ""
+# for name in name_list:
+#     if len(name) > longest:
+#         longest_name = name
+#         longest = len(name)
+# shortest = longest
+# shortest_name = ""
+# for name in name_list:
+#     if len(name) < shortest:
+#         shortest_name = name
+#         shortest = len(name)
+# print(f'The longest name is {longest_name}, It has {longest} characters.')
+# print(f'The shortest name is {shortest_name}, It has {shortest} characters.')        
+# ===============================================================================
+
+#==========================================================================
+# 9. Ask user to enter number of years of work experience. 
+# Print out the following message based on the answer.
+# All ranges are inclusive.
+# 0-2 years: "New grad"
+# 3-5 years: "Mid"
+# 6-10 years: "Senior"
+# 11 or more years: "Leadership"
+# solution: ------
+# user_years = int(input("Enter your years of working experience: "))
+# if user_years > 0:
+#     if user_years < 2:
+#         print("New grad")
+#     elif user_years >= 3 and user_years <= 5:
+#         print("Mid")
+#     elif user_years >= 6 and user_years <= 10:
+#         print("Senior")
+#     elif user_years >= 11:
+#         print("Leadership")    
+# ===============================================================
+
+# ===============================================================
+# Ask user to enter a number between 1 and 10. 
+# Keep prompting the user to guess until the user is correct.
+# Once the user is correct, the user wins the game. 
+# You may choose the winning number and hard code it. 
+# Print when the user won and how many tries it took.
+# Solution: -----------
+# answer = random.randint(1, 10)
+# user_ipt = int(input("Guess a number between 1 and 10: "))
+# tries = 1
+# while user_ipt != answer:
+#     user_ipt = int(input("WRONG! Try again: "))
+#     tries += 1
+# else:
+#     print(f'You Win, You had the right number in {tries} tries.')    
+# ================================================================
+<<<<<<< HEAD
 # :
 # lst = ["the", "word", "test", "a", "question"]
 # new_lst = []
