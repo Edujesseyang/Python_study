@@ -710,8 +710,8 @@ from collections import namedtuple
 # else:
 #     print(f'You Win, You had the right number in {tries} tries.')    
 # ================================================================
-<<<<<<< HEAD
-# :
+# ===================================================
+# 
 # lst = ["the", "word", "test", "a", "question"]
 # new_lst = []
 # longest = 0
@@ -768,16 +768,28 @@ from collections import namedtuple
 # in and returns a 2-element list back with a sum of the odd numbers in the
 # input list and a sum of the even numbers in the input list.
 # -----------------------------------------
-num_list = []
-ipt = 0
-while ipt != "":
-    ipt = input("Enter a number: ")
-    if ipt != "":
-      num_list.append(int(ipt))  
+# num_list = []
+# ipt = 0
+# while ipt != "":
+#     ipt = input("Enter a number: ")
+#     if ipt != "":
+#       num_list.append(int(ipt))  
       
-print(num_list)
+# def sum(my_list):
+#     result = []
+#     sum_odd = 0
+#     sum_even = 0
+#     for num in my_list:
+#         if num % 2 == 0:
+#             sum_even += num
+#         else:
+#             sum_odd += num
+#     result = [sum_even, sum_odd]
+#     return result
 
-def sum(num_list):
-    for num in num_list:
-        if
-    
+# answer = sum(num_list)
+# print(f'Sum of odd is {answer[1]}')
+# print(f'Sum of even is {answer[0]}')
+# ================================================ 
+
+# ====================================================
