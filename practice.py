@@ -793,3 +793,96 @@ from collections import namedtuple
 # ================================================ 
 
 # ====================================================
+# print pics
+# -------------------------
+# def cowboy_hat():
+#     print("    ____")
+#     print("   |    |")
+#     print("   |====|  ")
+#     print("~~~~~~~~~~~~")
+# def magic_hat():
+#     print("     )(")
+#     print("    /  \ ")
+#     print("   /... \ ")
+#     print("~~~~~~~~~~~~")
+# def man_face(type_hat):
+#     type_hat()
+#     print(" q  O  O  p")
+#     print("  \  ||  /  ")
+#     print("   \ ^^ /")
+#     print("    \__/")   
+# def girl_face(type_hat):
+#     type_hat()
+#     print("|q|^O  O^|p|") 
+#     print("||\  __  /||")
+#     print("|| \____/ ||")
+# def body(type_hat, type_face):
+#     type_face(type_hat)
+#     print("   __||__ ")
+#     print("  /  \/  \ ")
+#     print(" /|  88  |\ ")
+#     print("| |  88  | | ")
+#     print(" \|__88__|/")
+#     print("  |  __  |  ")
+#     print("  |  ||  | ")
+#     print("  |  ||  |")
+#     print("  |__||__|")
+#     print(" (__/  \__)")
+    
+# print("print menu: ")
+# print("1: cowboy hat, 2: magic hat")
+# hat = int(input("Enter hat number: "))
+# print("1: man face, 2: girl face")
+# face = int(input("Enter face number: "))
+# if hat == 1 and face == 1:
+#     body(cowboy_hat, man_face)
+# elif hat == 1 and face == 2:
+#     body(cowboy_hat, girl_face)
+# elif hat == 2 and face == 1:
+#     body(magic_hat, man_face)
+# elif hat == 2 and face == 2:
+#     body(magic_hat, girl_face)
+# else:
+#     print("Please enter the right number. ")
+# =====================================
+
+# =====================================
+# Arbitrary argument list
+# *args
+# -----------------------
+# def add_up(x, y, *more):
+#     result = x + y
+#     for num in more:
+#         result += num
+#     return result
+
+# print(add_up(1, 3, 4, 5, 6))
+# -------------------------
+# **kwargs
+# ---------------------
+# def info(name, **info):
+#     print(f'{name}:')
+#     for category, context in info.items():
+#         print(f'{category} is {context}')
+# info("Jesse", age=35, gender="male", wife="Chloe", favorite_food="noodle")
+# ====================================================
+
+# ====================================
+# function that return multiple values
+# # ----------------------
+# def circle_calcs(r):
+#     A = 3.141592653 * r * r
+#     P = 2 * 3.141592653 * r
+#     return A, P
+# given_radius = 5.0
+# units = "cm"
+# area, perimeter = circle_calcs(given_radius)
+# print(f'A circle with radius is {given_radius}{units}, the area is {round(area, 2)}{units}^2, the perimeter is {round(perimeter, 2)}{units}. ')
+# =====================================================
+    
+        
+
+
+
+
+    
