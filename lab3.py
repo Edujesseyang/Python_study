@@ -21,7 +21,7 @@ import random
 def get_user_input():
     '''Get user input number, return an int between 1 to 20.'''
     user_input = int(input("Enter a number between 1 to 20: "))
-    while user_input < 1 or user_input > 20:
+    while not 1 <= user_input <= 20: 
         user_input = int(input("Enter a number between 1 to 20: "))
     return user_input
 
@@ -57,7 +57,7 @@ def start_game():
             break
     if winning == False: # give out the right answer after user lost.
         print(f'The right answer is {get_random}.')   
-             
+    return None         
 start_game() 
         
         
