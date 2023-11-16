@@ -909,27 +909,84 @@ from collections import namedtuple
 # ============================================
 # guessing word game:
 #-----------------------------------------
-'''create a word list and random out one word to be the target word.'''
-word_list = ["python", "game", "cool", "cat", "dog", 'mother', 'father', 'school', 'water', 'superman']
-word_num = random.randint(0, 9)
-target_word = word_list[word_num]
+# '''create a word list and random out one word to be the target word.'''
+# word_list = ["python", "game", "cool", "cat", "dog", 'mother', 'father', 'school', 'water', 'superman']
+# word_num = random.randint(0, 9)
+# target_word = word_list[word_num]
 
-'''replace the target word to be ------ format'''
-hide_target = "-" * len(target_word)
-chances = 10
-
-while hide_target.find("-") != -1 and chances > 0:
-    user_input = input("Guess a character may in the word: ")
-    print(hide_target)
-    right_index = -1
-    right_char = ""
-    for i in range(len(target_word)):
-        if user_input == target_word[i]:
-            right_index = i
-            right_char = user_input
-    hide_target = '-' * (right_index - 1) + right_char + '-' * (len(target_word) - right_index)
-    chances -= 1
-    print(f'You have {chances} chances left.')   
+# '''replace the target word to be ------ format'''
+# hide_target = "-" * len(target_word)
+# chances = 10
+# print(target_word)
+# while chances > 0:
+#     user_input = input("Guess a character may in the word: ")
+#     right_index = -1
+  
+#     for i in range(len(target_word)):
+#         if user_input == target_word[i]:
+#             right_index = i
+           
+#     if right_index != -1:       
+#         hide_target = hide_target.replace(hide_target[right_index], user_input)
+       
+#     chances -= 1
+#     print(hide_target)
+#     print(f'You have {chances} chances left.')   
        
             
-  
+# ========================================================================== FIXME:
+
+# ==========================================================================
+#  Prompt user for a sentence about programming. Slice the string for every other character. 
+# Then, count the  number of vowels and consonants (punctuation and spaces don't count) and print those values out.
+# ------------------------------------
+# string = input("Enter a sentence:")
+# string = string[: : 2]
+# vowels_count = 0
+# consonants_count = 0
+
+# string = string.lower()
+# for char in string:
+#     if char != " ":
+#         if char == "a" or "e" or "i" or "o" or "u":
+#             vowels_count += 1
+#         elif char.isalpha() == True:
+#             consonants_count += 1
+        
+# print(f'There is {vowels_count} vowels, and {consonants_count} consonants.' )        
+# print(string)
+# ======================================================
+
+# =======================================================
+# Prompt user for another sentence about programming. 
+# Then ask user to enter in a word. 
+# Using string methods to check if the word is in the sentence.
+# -----------------------------------------
+# string = input("Enter a sentence: ")
+# word = input("Enter a word: ")
+# if string.find(word) == -1:
+#     print(f'There is no word: {word} in the sentence. ')
+# else:
+#     print("The word is in the sentence.")
+# ========================================================
+
+# =======================================================
+# Use a while loop to keep prompting user for more positive integers until user types -1.
+# ----------------------------------------------------------
+num = -1
+new_list = []
+while num < 0:
+    num = int(input("Enter a positive int: "))
+    new_list.append(num)
+
+dict = {}
+
+
+for num in new_list:
+    if num in dict:
+        dict[num] += 1
+    else:
+        dict[num] += 0
+print(dict)
+    
+
