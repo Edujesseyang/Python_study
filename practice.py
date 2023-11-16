@@ -906,5 +906,30 @@ from collections import namedtuple
 # print(x)
 # ============================================
 
+# ============================================
+# guessing word game:
+#-----------------------------------------
+'''create a word list and random out one word to be the target word.'''
+word_list = ["python", "game", "cool", "cat", "dog", 'mother', 'father', 'school', 'water', 'superman']
+word_num = random.randint(0, 9)
+target_word = word_list[word_num]
 
-    
+'''replace the target word to be ------ format'''
+hide_target = "-" * len(target_word)
+chances = 10
+
+while hide_target.find("-") != -1 and chances > 0:
+    user_input = input("Guess a character may in the word: ")
+    print(hide_target)
+    right_index = -1
+    right_char = ""
+    for i in range(len(target_word)):
+        if user_input == target_word[i]:
+            right_index = i
+            right_char = user_input
+    hide_target = '-' * (right_index - 1) + right_char + '-' * (len(target_word) - right_index)
+    chances -= 1
+    print(f'You have {chances} chances left.')   
+       
+            
+  
