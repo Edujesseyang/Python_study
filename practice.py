@@ -910,31 +910,41 @@ from collections import namedtuple
 # guessing word game:
 #-----------------------------------------
 # '''create a word list and random out one word to be the target word.'''
-# word_list = ["python", "game", "cool", "cat", "dog", 'mother', 'father', 'school', 'water', 'superman']
-# word_num = random.randint(0, 9)
+# word_list = ["fox", "bee", "box", "cat", "dog", 'pig', 'owl', 'rat', 'bat', 'elk', 'ape', 'cow']
+# word_num = random.randint(0, 12)
 # target_word = word_list[word_num]
-
+# final_answer = word_list[word_num]
 # '''replace the target word to be ------ format'''
 # hide_target = "-" * len(target_word)
 # chances = 10
-# print(target_word)
-# while chances > 0:
-#     user_input = input("Guess a character may in the word: ")
-#     right_index = -1
-  
-#     for i in range(len(target_word)):
-#         if user_input == target_word[i]:
-#             right_index = i
-           
-#     if right_index != -1:       
-#         hide_target = hide_target.replace(hide_target[right_index], user_input)
-       
-#     chances -= 1
-#     print(hide_target)
-#     print(f'You have {chances} chances left.')   
-       
+
+# def get_user_input():
+#     ipt = input("Guess a character may in the word: ")
+#     return ipt[0]
             
-# ========================================================================== FIXME:
+# user_input = '' # create a var for user input   
+# '''main loop: get user input, check  input and replace with hind_target word.'''
+# while chances > 0:
+#     user_input = get_user_input()
+#     for index in range(len(target_word)):   # loop to check if user_input is in the target
+#         if user_input == target_word[index]:    # if match, switch user input with hide_word same spot
+#             hide_target = hide_target[: index] + user_input + hide_target[index + 1 :]
+#             target_word = target_word[: index] + "-" + target_word[index + 1 : ]
+#     print(hide_target)  # print new hide word
+#     chances -= 1
+#     if chances > 1:  # count down chances
+#         print(f'You have {chances} chances left.')
+#     elif chances == 1:
+#         print(f'You have {chances} chance left.')
+#     else:
+#         print("No more chance!")
+#     if hide_target.find("-") == -1:  # if all "-" got replaced by user input chars. break loop & print win statement
+#         print("You win!")  
+#         break
+# else:
+#     print(f'You lose! Right answer is "{final_answer}"')  # if loop had completed, means no more chance to guess, print lose statement  
+    
+# ==========================================================================
 
 # ==========================================================================
 #  Prompt user for a sentence about programming. Slice the string for every other character. 
@@ -973,20 +983,35 @@ from collections import namedtuple
 # =======================================================
 # Use a while loop to keep prompting user for more positive integers until user types -1.
 # ----------------------------------------------------------
-num = -1
-new_list = []
-while num < 0:
-    num = int(input("Enter a positive int: "))
-    new_list.append(num)
+# num = int(input("Enter a positive int: "))
+# num_list = [num]
+# while True:
+#     try:
+#         num = int(input("Enter a positive int: "))
+#         num_list.append(num)
+#     except ValueError:
+#         break
 
-dict = {}
+# dict = {}
 
+# for num in num_list:
+#     if not num in dict:
+#         dict[num] = 0
+   
+# for num in num_list:
+#     if num in dict:
+#         dict[num] += 1
+# print(dict)
+# ===========================================================
 
-for num in new_list:
-    if num in dict:
-        dict[num] += 1
-    else:
-        dict[num] += 0
-print(dict)
-    
+#     ========================
+#    ||                      ||      
+#    ||       GOOD JOB       ||
+#    ||                      ||
+#     ========================
 
+#   恭喜你突破了1000行 python 练习. 
+#     请继续努力, 争取更大的进步.
+#            加油!!!
+
+# ======================================================
