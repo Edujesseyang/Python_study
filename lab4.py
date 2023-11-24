@@ -8,6 +8,8 @@
 # return true or false'''
 
 def palindrome_check(string):
+    '''input=str
+        output=bool'''    
     char_list = []
     compare_list = []
     for char in string:
