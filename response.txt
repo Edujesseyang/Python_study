@@ -1,0 +1,9 @@
+a is occurred 4 times in the text. 
+
+The top 5 common words are: 
+
+i : 5
+to : 5
+a : 4
+in : 3
+programming : 3
