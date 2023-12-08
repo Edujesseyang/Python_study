@@ -1,6 +1,7 @@
 import math
 import random
 from collections import namedtuple
+from typing import Any
 
 # # -----------------problem 1-----------------
 # year_wage = int(input("Enter yearly wage:"))
@@ -374,15 +375,15 @@ from collections import namedtuple
 #     if ipt == " ":
 #         break
 
-    
+
 #     value = input("Enter item value: ")
 #     dict[name] = value
-    
+
 #  # print("Check:",dict) --use this to check dict
 
 # for item in dict:
 #     print(f'{item} : {dict[item]}')
-#---------------------------above is good example to save inputs into a dict---------------------
+# ---------------------------above is good example to save inputs into a dict---------------------
 
 # -------------------银行倍率计算器--------------------------------
 # interest = float(input("Enter the interest rate:"))
@@ -392,19 +393,19 @@ from collections import namedtuple
 # for year in range(year): # 这里的第一个year和第二个year不一样, 第一个是方程里的临时名字变量, 第二个是用户输入的变量
 #     print(f'In the year {year}, You have {round(amount, 2)}')
 #     amount = amount + (amount * interest)
-#---------------------------------------------------------------             
+# ---------------------------------------------------------------
 
-#-------------------range() 的用法------------------------------
+# -------------------range() 的用法------------------------------
 # lst = range(10, 50, 5)
 # for num in lst:
 #     print(num)
-#----创造一个从10到50的每项增加5的list------------------------------
+# ----创造一个从10到50的每项增加5的list------------------------------
 
-#--------------class practice--------
+# --------------class practice--------
 # nums = []
 # for i in range(5):
 #     nums.append(int(input("Enter a number:")))
-    
+
 # print(nums)
 # total = 0
 # count = 0
@@ -412,14 +413,14 @@ from collections import namedtuple
 #     total += num
 #     count += 1
 # print(f'The sum is: {total}, The avg is: {round((total / count), 2)}')
-#---------------------------------------
+# ---------------------------------------
 
-#-------------class practice------------
+# -------------class practice------------
 # num = random.randint(0, 100)
 # user_ipt = int(input("Guess a number:  "))
 # tries = 7
 # while user_ipt != num or tries > 0:
-    
+
 #     if tries > 0:
 #         if user_ipt < num:
 #             print("Guess higher next time!")
@@ -433,13 +434,13 @@ from collections import namedtuple
 #         break
 #     tries -= 1
 #     user_ipt = int(input("Guess a number: "))
-#     print(f'You have {tries} more chances to guess!')     
-#-----------------------------------------------------------
+#     print(f'You have {tries} more chances to guess!')
+# -----------------------------------------------------------
 
-#----------------------class practice-----------------------
+# ----------------------class practice-----------------------
 # for num in range(250, 751, 50):
-#     print(num)   
-#-----------------------------------------------------------   
+#     print(num)
+# -----------------------------------------------------------
 
 # ------------------class practice--------------------------------
 # || Usage: input num of students, input name and scores pairs, ||
@@ -453,7 +454,7 @@ from collections import namedtuple
 #     name = input("Enter your student name: ")
 #     scores[name] = int(input("Enter your score: "))
 #     total += scores[name]
-    
+
 # for name in scores:
 #     print(f'{name} : {scores[name]}')
 
@@ -467,8 +468,8 @@ from collections import namedtuple
 #     if scores[name] == hightest:
 #         print(f'The hightest score is "{name}" : {hightest}. ')
 #         break
-#---------------------------------------------------------------
-    
+# ---------------------------------------------------------------
+
 # ---------------------双 item 的 for loop----------------------
 # lst = [1, 2, 3, 4, 5, 6]
 # for (index, value) in enumerate(lst):
@@ -506,7 +507,7 @@ from collections import namedtuple
 #     print(f'The distance between the point and force 2 is : {ans}')
 # ------------------------------------------------------------------------
 
-#----------------------Midterm------------------
+# ----------------------Midterm------------------
 # ipt = input("Enter the name of the city:")
 # i = 0
 # for char in ipt:
@@ -515,27 +516,27 @@ from collections import namedtuple
 # if i % 2 == 0:
 #     print("The name is even.")
 # else:
-#     print("The name is odd.")    
+#     print("The name is odd.")
 # #-----------------------------------------------
 
-#----------------------Mt 2-----------------------
+# ----------------------Mt 2-----------------------
 # lst = []
 # while ipt != -1:
 #     ipt = (input("Enter ints:"))
-#     lst.append(ipt) 
-  
+#     lst.append(ipt)
 
-# max_num = max(lst) 
-# second_max = -1  
+
+# max_num = max(lst)
+# second_max = -1
 # for num in lst:
 #     if num > second_max and num != max_num :
 #         second_max_num = num
 # if second_max == -1:
-#     second_max = max_num    
-# print("The second max is", second_max)    
-#------------------------------------------    
+#     second_max = max_num
+# print("The second max is", second_max)
+# ------------------------------------------
 
-#---------------MT 3-----------------
+# ---------------MT 3-----------------
 # phone_num = input("Enter a phone number: ")
 # digits = {
 #     '0' : 0,
@@ -549,14 +550,14 @@ from collections import namedtuple
 #     '8' : 0,
 #     '9' : 0
 #     }
-    
+
 # for digit in phone_num:
 #     if digit != "-":
 #         digits[digit] += 1
 # print(digits)
-#--------------------------------------------
+# --------------------------------------------
 
-#----------------Mt 4------------------------
+# ----------------Mt 4------------------------
 # grade = int(input("Enter your grade: "))
 # if grade >= 1 and grade <= 5:
 #     print("Elementary school.")
@@ -564,20 +565,20 @@ from collections import namedtuple
 #     print("Middle school.")
 # elif grade >= 9 and grade <= 12:
 #     print("High school.")
-#--------------------------------------------
+# --------------------------------------------
 
-#--------------------------------------------   
+# --------------------------------------------
 # 5. You have the following list of 5 strings:
 # ["the", "word", "test", "a", "question"]. Create a new
 # list with these words sorted in order of string length.
 # If two words have the same length, the order can be
-#either way (i.e. with "word" and "test"). You may use any
+# either way (i.e. with "word" and "test"). You may use any
 # string or list function to complete this problem.
 # ---------------------------------
 # # Solution:
 # lst = ["the", "word", "test", "a", "question"]   # test body
 # new_lst = [] # result list
-# longest = 0 
+# longest = 0
 # i = 0
 # temp = ""
 # count = len(lst)
@@ -589,13 +590,13 @@ from collections import namedtuple
 # while i < count:       # loop len(lst) times
 #     shortest = longest   # re-set  temp shortest every loop
 #     temp = ""           # re-set temp word every loop
-#     for word in lst:        # find the shortest word 
+#     for word in lst:        # find the shortest word
 #         if len(word) <= shortest:
-#             temp = word    # assign temp to be the shortest word 
-#             shortest = len(word)    # re-assign the length of the shortest 
-            
+#             temp = word    # assign temp to be the shortest word
+#             shortest = len(word)    # re-assign the length of the shortest
+
 #     new_lst.append(temp)   # add temp to result list
-           
+
 #     for word in lst:      # loop list body find and remove the shortest word
 #         if  word == temp:
 #             lst.remove(word)
@@ -606,7 +607,7 @@ from collections import namedtuple
 
 # =================================================
 # 6. Print out all of the numbers from -1000 to 1000 (inclusive, exclusive) in groups of 4.
-#---------------------------------------------------
+# ---------------------------------------------------
 # for nums in range(-1000, 1001, 4):
 #     print(nums)
 # ===================================================
@@ -640,12 +641,12 @@ from collections import namedtuple
 #     if city_temps[name] < lowest:
 #         lowest = city_temps[name]
 #         lo_city = name
-# print(f'The hottest city is {hi_city}, the temperature is {hightest}.')  
-# print(f'The coldest city is {lo_city}, the temperature is {lowest}.')  
-# ====================================================================================     
+# print(f'The hottest city is {hi_city}, the temperature is {hightest}.')
+# print(f'The coldest city is {lo_city}, the temperature is {lowest}.')
+# ====================================================================================
 
 # =====================================================================================
-# 8. Ask user to keep entering names until user is finished. 
+# 8. Ask user to keep entering names until user is finished.
 # Put these names into a list. Print out the longest and shortest names. Spaces count as characters.
 # Solution: ---------------------------------------------------------------------------
 # name_list = []
@@ -655,7 +656,7 @@ from collections import namedtuple
 #     user_ipt = input("Enter a name, double press enter to finish entering: ")
 #     name_list.append(user_ipt)
 
-# name_list.pop(len(name_list) - 1)  
+# name_list.pop(len(name_list) - 1)
 
 # longest = 0
 # longest_name = ""
@@ -670,11 +671,11 @@ from collections import namedtuple
 #         shortest_name = name
 #         shortest = len(name)
 # print(f'The longest name is {longest_name}, It has {longest} characters.')
-# print(f'The shortest name is {shortest_name}, It has {shortest} characters.')        
+# print(f'The shortest name is {shortest_name}, It has {shortest} characters.')
 # ===============================================================================
 
-#==========================================================================
-# 9. Ask user to enter number of years of work experience. 
+# ==========================================================================
+# 9. Ask user to enter number of years of work experience.
 # Print out the following message based on the answer.
 # All ranges are inclusive.
 # 0-2 years: "New grad"
@@ -691,14 +692,14 @@ from collections import namedtuple
 #     elif user_years >= 6 and user_years <= 10:
 #         print("Senior")
 #     elif user_years >= 11:
-#         print("Leadership")    
+#         print("Leadership")
 # ===============================================================
 
 # ===============================================================
-# Ask user to enter a number between 1 and 10. 
+# Ask user to enter a number between 1 and 10.
 # Keep prompting the user to guess until the user is correct.
-# Once the user is correct, the user wins the game. 
-# You may choose the winning number and hard code it. 
+# Once the user is correct, the user wins the game.
+# You may choose the winning number and hard code it.
 # Print when the user won and how many tries it took.
 # Solution: -----------
 # answer = random.randint(1, 10)
@@ -708,10 +709,10 @@ from collections import namedtuple
 #     user_ipt = int(input("WRONG! Try again: "))
 #     tries += 1
 # else:
-#     print(f'You Win, You had the right number in {tries} tries.')    
+#     print(f'You Win, You had the right number in {tries} tries.')
 # ================================================================
 # ===================================================
-# 
+#
 # lst = ["the", "word", "test", "a", "question"]
 # new_lst = []
 # longest = 0
@@ -724,11 +725,11 @@ from collections import namedtuple
 #             longest = len(word)
 #             temp = word
 #             index = lst.index(word)
-#     i += 1        
+#     i += 1
 #     new_lst.append(temp)
-#     # lst.pop(index)    
-# print(longest) 
-# print(temp)       
+#     # lst.pop(index)
+# print(longest)
+# print(temp)
 # print(new_lst)
 # =========================================
 
@@ -742,8 +743,8 @@ from collections import namedtuple
 # =================================================
 
 # ==================================================
-# Create a function that asks student for first and last name (separately), student ID, 
-# classes that get read into a list, and expected graduation year. Create another 
+# Create a function that asks student for first and last name (separately), student ID,
+# classes that get read into a list, and expected graduation year. Create another
 # function that prints out the information in this order:
 # --------------------------------------
 # def lst(name, ID, classes, year):
@@ -754,17 +755,17 @@ from collections import namedtuple
 #     'year' : input("Enter your graduation year: ")
 #     }
 #     return list_name
-    
-    
+
+
 # def prt(name):
 #     print(name)
-    
+
 # student = lst("yang", 124, "python", 2024)
 # prt(student)
 # ====================================================
 
 # ==============================================
-# Prompt the user for a list of numbers. Create a function that takes the list 
+# Prompt the user for a list of numbers. Create a function that takes the list
 # in and returns a 2-element list back with a sum of the odd numbers in the
 # input list and a sum of the even numbers in the input list.
 # -----------------------------------------
@@ -773,8 +774,8 @@ from collections import namedtuple
 # while ipt != "":
 #     ipt = input("Enter a number: ")
 #     if ipt != "":
-#       num_list.append(int(ipt))  
-      
+#       num_list.append(int(ipt))
+
 # def sum(my_list):
 #     result = []
 #     sum_odd = 0
@@ -790,7 +791,7 @@ from collections import namedtuple
 # answer = sum(num_list)
 # print(f'Sum of odd is {answer[1]}')
 # print(f'Sum of even is {answer[0]}')
-# ================================================ 
+# ================================================
 
 # ====================================================
 # print pics
@@ -810,10 +811,10 @@ from collections import namedtuple
 #     print(" q  O  O  p")
 #     print("  \  ||  /  ")
 #     print("   \ ^^ /")
-#     print("    \__/")   
+#     print("    \__/")
 # def girl_face(type_hat):
 #     type_hat()
-#     print("|q|^O  O^|p|") 
+#     print("|q|^O  O^|p|")
 #     print("||\  __  /||")
 #     print("|| \____/ ||")
 # def body(type_hat, type_face):
@@ -828,7 +829,7 @@ from collections import namedtuple
 #     print("  |  ||  |")
 #     print("  |__||__|")
 #     print(" (__/  \__)")
-    
+
 # print("print menu: ")
 # print("1: cowboy hat, 2: magic hat")
 # hat = int(input("Enter hat number: "))
@@ -887,7 +888,7 @@ from collections import namedtuple
 # make a new string for all numbers
 # re-type the string to be int.
 # return if result in 1-20.
-#--------------------------------------------
+# --------------------------------------------
 # def get_input():
 #     result = ""
 #     vail = False
@@ -897,9 +898,9 @@ from collections import namedtuple
 #             if 48 <= ord(char) <= 57:
 #                 result = result + char
 #                 vail = True
-#     result = int(result)  
+#     result = int(result)
 #     while 1 <= result <= 20:
-#         return result   
+#         return result
 #     else:
 #         print("enter vail number")
 # x = get_input()
@@ -908,7 +909,7 @@ from collections import namedtuple
 
 # ============================================
 # guessing word game:
-#-----------------------------------------
+# -----------------------------------------
 # '''create a word list and random out one word to be the target word.'''
 # word_list = ["fox", "bee", "box", "cat", "dog", 'pig', 'owl', 'rat', 'bat', 'elk', 'ape', 'cow']
 # word_num = random.randint(0, 12)
@@ -921,8 +922,8 @@ from collections import namedtuple
 # def get_user_input():
 #     ipt = input("Guess a character may in the word: ")
 #     return ipt[0]
-            
-# user_input = '' # create a var for user input   
+
+# user_input = '' # create a var for user input
 # '''main loop: get user input, check  input and replace with hind_target word.'''
 # while chances > 0:
 #     user_input = get_user_input()
@@ -939,15 +940,15 @@ from collections import namedtuple
 #     else:
 #         print("No more chance!")
 #     if hide_target.find("-") == -1:  # if all "-" got replaced by user input chars. break loop & print win statement
-#         print("You win!")  
+#         print("You win!")
 #         break
 # else:
-#     print(f'You lose! Right answer is "{final_answer}"')  # if loop had completed, means no more chance to guess, print lose statement  
-    
+#     print(f'You lose! Right answer is "{final_answer}"')  # if loop had completed, means no more chance to guess, print lose statement
+
 # ==========================================================================
 
 # ==========================================================================
-#  Prompt user for a sentence about programming. Slice the string for every other character. 
+#  Prompt user for a sentence about programming. Slice the string for every other character.
 # Then, count the  number of vowels and consonants (punctuation and spaces don't count) and print those values out.
 # ------------------------------------
 # string = input("Enter a sentence:")
@@ -962,14 +963,14 @@ from collections import namedtuple
 #             vowels_count += 1
 #         elif char.isalpha() == True:
 #             consonants_count += 1
-        
-# print(f'There is {vowels_count} vowels, and {consonants_count} consonants.' )        
+
+# print(f'There is {vowels_count} vowels, and {consonants_count} consonants.' )
 # print(string)
 # ======================================================
 
 # =======================================================
-# Prompt user for another sentence about programming. 
-# Then ask user to enter in a word. 
+# Prompt user for another sentence about programming.
+# Then ask user to enter in a word.
 # Using string methods to check if the word is in the sentence.
 # -----------------------------------------
 # string = input("Enter a sentence: ")
@@ -997,7 +998,7 @@ from collections import namedtuple
 # for num in num_list:
 #     if not num in dict:
 #         dict[num] = 0
-   
+
 # for num in num_list:
 #     if num in dict:
 #         dict[num] += 1
@@ -1005,12 +1006,12 @@ from collections import namedtuple
 # ===========================================================
 
 #     ========================
-#    ||                      ||      
+#    ||                      ||
 #    ||       GOOD JOB       ||
 #    ||                      ||
 #     ========================
 
-#   恭喜你突破了1000行 python 练习. 
+#   恭喜你突破了1000行 python 练习.
 #     请继续努力, 争取更大的进步.
 #            加油!!!
 
@@ -1025,7 +1026,7 @@ from collections import namedtuple
 #         nums.append(int(input("Enter a int number: ")))
 #     except ValueError:
 #         break
-    
+
 # total_sum = sum(nums)
 # avg = total_sum/len(nums)
 
@@ -1034,8 +1035,8 @@ from collections import namedtuple
 
 # ===============================================
 # class problem, Module 9
-# Create a student class. The class should have an init function and member variables: 
-# first_name, last_name, id, courses. Classes should be a dictionary that maps a course id to a list containing course name, 
+# Create a student class. The class should have an init function and member variables:
+# first_name, last_name, id, courses. Classes should be a dictionary that maps a course id to a list containing course name,
 # grade as percentage float, and grade as string letter (i.e. B+). Percentage float should be rounded to 2 decimal places.
 # Solution:
 # class Student:
@@ -1061,7 +1062,7 @@ from collections import namedtuple
 #         '''No return'''
 #         print(f'{self.last_name}, {self.first_name}:\n ID:   {self.id}\n Course:   {self.courses}\n   Grade:{self.grade}\n   GPA: {self.gpa}')
 #     def add_courses(self):
-        
+
 #         '''No input, No return'''
 #         self.input = (input("Enter your courses: "))
 #         while self.input != "":
@@ -1071,12 +1072,12 @@ from collections import namedtuple
 #         self.grade = input("Enter your grade: ")
 #         valid = False
 #         while valid == False:
-#             try:            
+#             try:
 #                 self.gpa = float(input("Enter your GPA: "))
 #                 valid = True
 #             except ValueError:
 #                 print("Invalid GPA.")
-        
+
 # '''Create student_1'''
 # student_1 = Student("Jesse", "Yang", 20545215)
 # student_1.add_courses()
@@ -1088,39 +1089,181 @@ from collections import namedtuple
 # ===================================================
 
 # ==================================================
-# 1. Prompt the user to write a few sentences about future academic interests. 
+# 1. Prompt the user to write a few sentences about future academic interests.
 # Split the string into individual words and
 # write them out line by line into a file called words.txt.
 #
 # 2. Read in the words from the text file line by line and calculate the average word length. Then, print it to screen.
 # -------------------
 # solution:
-user_input = input("Enter a few lines sentences about future academic: ")
-input_words = user_input.split(" ")
-print(input_words)
+# user_input = input("Enter a few lines sentences about future academic: ")
+# input_words = user_input.split(" ")
+# print(input_words)
 
-txt_file = open("text.txt", "w")
+# txt_file = open("text.txt", "w")
 
-for word in input_words:
-    txt_file.write(word)
-    txt_file.write("\n")
-txt_file.close()
+# for word in input_words:
+#     txt_file.write(word)
+#     txt_file.write("\n")
+# txt_file.close()
 
-file_open = open("text.txt", "r")
-txt_read = file_open.readlines()
+# file_open = open("text.txt", "r")
+# txt_read = file_open.readlines()
 
-word_count = 0
-total_length = 0
-for word in txt_read:
-    total_length += len(word[:-1])
-    word_count += 1
-avg_length = total_length / word_count
+# word_count = 0
+# total_length = 0
+# for word in txt_read:
+#     total_length += len(word[:-1])
+#     word_count += 1
+# avg_length = total_length / word_count
 
-print(f'Total length is {total_length} \nWord count is {word_count}')
-print(f'The avg length of those words is {round(avg_length, 1)}')
-file_open.close()
+# print(f'Total length is {total_length} \nWord count is {word_count}')
+# print(f'The avg length of those words is {round(avg_length, 1)}')
+# file_open.close()
 
-file_open = open("text.txt", "r")
-content = file_open.read()
-print(content)
+# file_open = open("text.txt", "r")
+# content = file_open.read()
+# print(content)
 # ==========================================
+
+# =================================
+# Ask the user to provide the URL of a website.
+# (Assume the user input is valid) Using what you know about strings,
+# get the domain of the website. For example,
+# the domain name for https://www.deanza.edu/directory/user.html?u=readjustinLinks to an external site.
+# would be deanza.edu. You can assume that the website is the standard format, i.e.
+# https://www.domainname.com/something/something/etcLinks to an external site.,
+# so there won't be any en.wikipedia.org or any different formats for this problem.
+# ----------------------
+# ucl = input("Please enter website add: ")
+# ucl_list = ucl.split(".")
+# ucl_sub_list = ucl_list[2].split("/")
+# print(f'{ucl_list[1]}.{ucl_sub_list[0]}')
+# ============================================
+
+# ===================================
+# Prompt the user for the number of students in the following classes; CIS 40, CIS 41A, CIS 41B,
+# and create a dictionary with that information.
+# Use input validation to ensure that the number is between 0 and 40 inclusive for each class.
+# Print out the class name and class count with the most number of students. If there is a tie,
+# choose one class to print out.
+# ------------------
+# cls_dict = {}
+# cls1 = input("class name:")
+# cls1_n = int(input("class size:"))
+# if cls1_n >40 or cls1_n < 0:
+#     raise ValueError("out range")
+# cls2 = input("class name:")
+# cls2_n = int(input("class size:"))
+# if cls2_n > 40 or cls2_n < 0:
+#     raise ValueError("out range")
+# cls3 = input("class name:")
+# cls3_n = int(input("class size:"))
+# if cls3_n > 40 or cls3_n < 0:
+#     raise ValueError("out range")
+
+# cls_dict = {
+#     cls1 : cls1_n,
+#     cls2 : cls2_n,
+#     cls3 : cls3_n
+# }
+
+# max_count = 0
+# max_name = ""
+# for name, student in cls_dict.items():
+#     if student > max_count:
+#         max_count = student
+#         max_name = name
+# print(f'largest class is {max_name}, with {max_count} students.')
+# ==========================================================
+
+# ==========================================================
+# Create a GroceryStore class that includes the following items with an initial price of 0:
+# bread, milk, cheese, fruit, vegetable.
+# Create 2 functions with this class,
+# one that will set the value of the prices (so the user will pass them in),
+# and another function that will print out the prices of all the items.
+# ------------------------------------
+# class Menu:
+#     def __init__(self, bread=0.0, milk=0.0, cheese=0.0, fruit=0.0, vegetable=0.0):
+#         self.bread = bread
+#         self.milk = milk
+#         self.cheese = cheese
+#         self.fruit = fruit
+#         self.vegetable = vegetable
+
+#     def print_price(self):
+#         print(f'bread : ${self.bread}')
+#         print(f'milk : ${self.milk}')
+#         print(f'cheese : ${self.cheese}')
+#         print(f'fruit : ${self.fruit}')
+#         print(f'vegetable : ${self.vegetable}')
+
+# p1 = Menu(1.99, 2.99,3.99, 4.99, 5.99)
+# p1.print_price()
+# ========================================
+
+# ========================================
+# Imagine there is a file called city elevations.
+# txt with the following elevations 
+# (these are not meant to represent real numbers, 
+#  they are just made up for this problem).
+# San Francisco 800
+
+# San Jose 600
+
+# Los Angeles 100
+
+# San Diego 250
+
+# Sacramento 50
+# Read these in to your python program and print out the average,
+# highest, and lowest city elevations. 
+# You can use built in functions to python for this problem.
+# ------------------
+# file_1 = open("text.txt", "r")
+# str_1 = file_1.read()
+# file_1.close()
+# word_list = str_1.split()
+# num_list = []
+
+# for word in word_list:
+#     try:
+#         num_list.append(int(word))
+#     except:
+#         pass
+
+# print(f'The highest elevation is {max(num_list)}')
+# print(f'The lowest elevation is {min(num_list)}')
+# print(f'The avg of the elevation is {sum(num_list) / len(num_list)}')
+# ==============================================
+
+# ==========================================================
+# There is a file called interests.txt which contains a paragraph of a university applicant's goals for applying. 
+# Write code that would read in the paragraph into a string 
+# (you can assume the file exists in the same folder as the python program). 
+# Print out the longest and the shortest words in that paragraph, along with the length of those words. 
+# If there is a tie, you can pick 1 word.
+# -------------------------------
+# file_1 = open("text.txt", "r")
+# str_1 = file_1.read()
+# file_1.close()
+
+# word_list = str_1.split()
+# longest = 0 
+# longest_word = ""
+
+# for word in word_list:
+#     if len(word) > longest:
+#         longest = len(word)
+#         longest_word = word
+        
+# shortest = longest
+# shortest_word = ""
+# for word in word_list:
+#     if len(word) < shortest:
+#         shortest = len(word)
+#         shortest_word = word
+# print(f'The longest word is {longest_word}, with length of {longest}')
+# print(f'The shortest word is {shortest_word}, with length of {shortest}')
+# ===================================================================
