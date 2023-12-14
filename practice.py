@@ -246,7 +246,7 @@ from typing import Any
 #         ipt = input("你这句话说的, 我都不知道怎么反驳! \n")
 
 # print("跟你聊天真开心, 再见!")
-# ----------------不是能智能, 哈哈---------------
+# -------------------------------
 
 # ------------input nums to get the avg---------------
 #  || usage: keep input nums, when finish, input 0. ||
@@ -472,7 +472,7 @@ from typing import Any
 
 # ---------------------双 item 的 for loop----------------------
 # lst = [1, 2, 3, 4, 5, 6]
-# for (index, value) in enumerate(lst):
+# for (index, value) in enumerate(lst):                                                               ???
 #     print(f'{index} : {lst[index]}')
 # ---------用 enumerate() 方程来实现 显示 index 和 value ----------
 
