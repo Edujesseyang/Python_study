@@ -1205,8 +1205,8 @@ from typing import Any
 
 # ========================================
 # Imagine there is a file called city elevations.
-# txt with the following elevations 
-# (these are not meant to represent real numbers, 
+# txt with the following elevations
+# (these are not meant to represent real numbers,
 #  they are just made up for this problem).
 # San Francisco 800
 
@@ -1218,7 +1218,7 @@ from typing import Any
 
 # Sacramento 50
 # Read these in to your python program and print out the average,
-# highest, and lowest city elevations. 
+# highest, and lowest city elevations.
 # You can use built in functions to python for this problem.
 # ------------------
 # file_1 = open("text.txt", "r")
@@ -1239,10 +1239,10 @@ from typing import Any
 # ==============================================
 
 # ==========================================================
-# There is a file called interests.txt which contains a paragraph of a university applicant's goals for applying. 
-# Write code that would read in the paragraph into a string 
-# (you can assume the file exists in the same folder as the python program). 
-# Print out the longest and the shortest words in that paragraph, along with the length of those words. 
+# There is a file called interests.txt which contains a paragraph of a university applicant's goals for applying.
+# Write code that would read in the paragraph into a string
+# (you can assume the file exists in the same folder as the python program).
+# Print out the longest and the shortest words in that paragraph, along with the length of those words.
 # If there is a tie, you can pick 1 word.
 # -------------------------------
 # file_1 = open("text.txt", "r")
@@ -1250,14 +1250,14 @@ from typing import Any
 # file_1.close()
 
 # word_list = str_1.split()
-# longest = 0 
+# longest = 0
 # longest_word = ""
 
 # for word in word_list:
 #     if len(word) > longest:
 #         longest = len(word)
 #         longest_word = word
-        
+
 # shortest = longest
 # shortest_word = ""
 # for word in word_list:
@@ -1267,3 +1267,62 @@ from typing import Any
 # print(f'The longest word is {longest_word}, with length of {longest}')
 # print(f'The shortest word is {shortest_word}, with length of {shortest}')
 # ===================================================================
+
+
+# exam_scores_by_id = {'1' : 95, '2' : 50, '3' : 75, '4' : 90, '5' : 65}
+# highest = 0
+# highest_id = ""
+# for id, score in exam_scores_by_id.items():
+#     if score > highest:
+#         highest = score
+#         highest_id = id
+# print(f'The highest score is {highest}, id is {highest_id}')
+
+# def sphere_surface_calc(radius):
+#     s = 0.0
+#     s = 4.0 * 3.141592653 * (radius ** 2)
+#     return round(s, 2)
+
+# def main():
+
+#     S = Student("Sam", classList)         # create a Student object with an instance attribute called name, to
+#                                          # store the input name ("Sam" in this case), and an instance attribute
+#                                          # called classes, to store the classes in the classList argument.
+#     S.search("CIS 40")                   # print "found" if "CIS 40" is in the student's class list
+#                                          # or print "not found" otherwise
+#     S.print()                             # print the name of the student and then print all the student's classes
+
+
+class Student:
+    def __init__(self, name, classList):
+        self.name = name
+        self.classList = classList
+
+
+    def search(self, className):
+        found_bool = 0
+        for classes in self.classList:
+            if classes == className:
+                print("found")
+                found_bool = 1
+        if found_bool == 0:
+            print("not found")
+
+
+    def print(self):
+        print(f'Name: {self.name}: ')
+        print("Classes:")
+        for classes in self.classList:
+            print(classes)
+           
+    def class_count(self):
+        count = len(self.classList)
+        print(f'The student totally enrolled {count} classes.')
+
+
+
+classes_list = ["math", "calc", "english"]
+yang = Student("Yang", classes_list)
+yang.search("english")
+yang.print()
+yang.class_count()
