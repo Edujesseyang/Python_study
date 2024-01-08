@@ -1293,36 +1293,39 @@ from typing import Any
 #     S.print()                             # print the name of the student and then print all the student's classes
 
 
-class Student:
-    def __init__(self, name, classList):
-        self.name = name
-        self.classList = classList
+# class Student:
+#     def __init__(self, name, classList):
+#         self.name = name
+#         self.classList = classList
 
 
-    def search(self, className):
-        found_bool = 0
-        for classes in self.classList:
-            if classes == className:
-                print("found")
-                found_bool = 1
-        if found_bool == 0:
-            print("not found")
+#     def search(self, className):
+#         found_bool = 0
+#         for classes in self.classList:
+#             if classes == className:
+#                 print("found")
+#                 found_bool = 1
+#         if found_bool == 0:
+#             print("not found")
 
 
-    def print(self):
-        print(f'Name: {self.name}: ')
-        print("Classes:")
-        for classes in self.classList:
-            print(classes)
-           
-    def class_count(self):
-        count = len(self.classList)
-        print(f'The student totally enrolled {count} classes.')
+#     def print(self):
+#         print(f'Name: {self.name}: ')
+#         print("Classes:")
+#         for classes in self.classList:
+#             print(classes)
+#            
+#     def class_count(self):
+#         count = len(self.classList)
+#         print(f'The student totally enrolled {count} classes.')
 
 
 
-classes_list = ["math", "calc", "english"]
-yang = Student("Yang", classes_list)
-yang.search("english")
-yang.print()
-yang.class_count()
+# classes_list = ["math", "calc", "english"]
+# yang = Student("Yang", classes_list)
+# yang.search("english")
+# yang.print()
+# yang.class_count()
+
+
+# =====================Course completed======================
