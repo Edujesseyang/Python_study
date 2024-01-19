@@ -1,0 +1,5 @@
+# There is a file called interests.txt which contains a paragraph of a university applicant's goals for applying.
+# Write code that would read in the paragraph into a string
+# (you can assume the file exists in the same folder as the python program).
+# Print out the longest and the shortest words in that paragraph, along with the length of those words.
+# If there is a tie, you can pick 1 word.

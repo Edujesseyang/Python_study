@@ -1,0 +1,8 @@
+San Francisco 800
+
+San Jose 600
+
+Los Angeles 100
+San Diego 250
+
+Sacramento 50
