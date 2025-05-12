@@ -1,5 +1,6 @@
 import math
 
+
 class FractionNum:
     def __init__(self, numerator, denominator):
         if denominator == 0:
@@ -53,6 +54,7 @@ class FractionNum:
 
     @staticmethod
     def to_fraction(num):
+        denominator = 1
         if isinstance(num, FractionNum):
             return num
         elif isinstance(num, int):
