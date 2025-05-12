@@ -1,6 +1,4 @@
 import math
-from warnings import catch_warnings
-
 
 class FractionNum:
     def __init__(self, numerator, denominator):
