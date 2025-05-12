@@ -36,6 +36,8 @@ class FractionNum:
         return FractionNum(new_numerator // gcd, new_denominator // gcd)
 
     def divide(self, other):
+        if other == 0:
+            raise ZeroDivisionError("Cannot divide zero")
         other = FractionNum.to_fraction(other)
 
         new_numerator = self.numerator * other.denominator
@@ -68,15 +70,27 @@ class FractionNum:
         return FractionNum(num, denominator)
 
 
+# test constructing
 f1 = FractionNum(1, 3)
 f2 = FractionNum(4, 7)
+
+# test methods
 print(f1.add(f2))
 print(f1.substra(f2))
 print(f1.multiple(f2))
 print(f1.divide(f2))
+
+# test chaining operations
 print(f1.add(3).multiple(5).substra(12))
 print(f1.add(3).multiple(5).substra(12).divide(f2))
+
+# test catch errors
 try:
     print(f1.add(3).multiple(5).substra(12).divide(0))
+except ZeroDivisionError:
+    print("Cannot divide zero")
+
+try:
+    f3 = FractionNum(1, 0)
 except ValueError:
-    print("Can divide zero")
+    print("Zero Denominator Error")
