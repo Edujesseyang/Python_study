@@ -1,6 +1,5 @@
 import math
 
-
 class FractionNum:
     def __init__(self, numerator, denominator):
         if denominator == 0:
